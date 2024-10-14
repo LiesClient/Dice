@@ -1,179 +1,278 @@
 html, body {
   width: 100%;
+   webkit-width:100%;
   height: 100%;
+   webkit-height:100%;
   margin: 0;
+   webkit-margin:0;
   padding: 0;
+   webkit-padding:0;
   overflow: hidden;
+   webkit-overflow:hidden;
 
   background-color: black;
+   webkit-background-color:black;
 
   user-select: none;
+   webkit-user-select:none;
   
 }
 
 #rack {
   position: absolute;
+   webkit-position:absolute;
   left: 0;
+   webkit-left:0;
   top: 0;
+   webkit-top:0;
 
   width: 100%;
+   webkit-width:100%;
   height: 100%;
+   webkit-height:100%;
 
   margin: 0;
+   webkit-margin:0;
   padding: 0;
+   webkit-padding:0;
 
   --dark: rgba(32, 64, 64, 1);
+      webkit---dark:rgba(32,64,64,1);
   --light: rgba(0, 0, 0, 0.4);
+      webkit---light:rgba(0,0,0,0.4);
 
   --small: 10%;
+   webkit---small:10%;
   --large: 90%;
+   webkit---large:90%;
 
   --angle: 45deg;
+   webkit---angle:45deg;
 
   background-image: 
+   webkit-background-image:
     linear-gradient(var(--angle), var(--dark) var(--small), var(--light) var(--small)),
+        webkit-linear-gradient(var(--angle),var(--dark)var(--small),var(--light)var(--small)),
     linear-gradient(calc(-1 * var(--angle)), var(--dark) var(--small), var(--light) var(--small)),
+          webkit-linear-gradient(calc(-1*var(--angle)),var(--dark)var(--small),var(--light)var(--small)),
     linear-gradient(var(--angle), var(--light) var(--large), var(--dark) var(--large)),
+        webkit-linear-gradient(var(--angle),var(--light)var(--large),var(--dark)var(--large)),
     linear-gradient(calc(-1 * var(--angle)), var(--light) var(--large), var(--dark) var(--large));
+          webkit-linear-gradient(calc(-1*var(--angle)),var(--light)var(--large),var(--dark)var(--large));
   background-size: calc(100% / 12) calc(100% / 8);
+        webkit-background-size:calc(100%/12)calc(100%/8);
   /* background-position: 0 0, 0 10px, 10px -10px, -10px 0px; */
+            webkit-/*background-position:00,010px,10px-10px,-10px0px;*/
 
   flex-wrap: wrap;
+   webkit-flex-wrap:wrap;
 
   font-family: monospace;
+   webkit-font-family:monospace;
 }
 
 #menu {
   position: absolute;
+   webkit-position:absolute;
   left: 0;
+   webkit-left:0;
   top: 0;
+   webkit-top:0;
 
   width: 100%;
+   webkit-width:100%;
   height: 100%;
+   webkit-height:100%;
 
   background-color: rgba(0, 0, 0, 0.4);
+      webkit-background-color:rgba(0,0,0,0.4);
   z-index: 10;
+   webkit-z-index:10;
 
   color: white;
+   webkit-color:white;
   display: none;
+   webkit-display:none;
 }
 
 #holder {
   border: 1px solid white;
+     webkit-border:1pxsolidwhite;
   border-radius: 5px;
+   webkit-border-radius:5px;
 
   margin: auto;
+   webkit-margin:auto;
   display: inline-block;
+   webkit-display:inline-block;
 
   position: relative;
+   webkit-position:relative;
   left: 50%;
+   webkit-left:50%;
   top: 50%;
+   webkit-top:50%;
 
   padding: 1em;
+   webkit-padding:1em;
 
   transform: translate(-50%, -50%);
+    webkit-transform:translate(-50%,-50%);
   background-color: black;
+   webkit-background-color:black;
 }
 
 .option {
   padding: 1em;
+   webkit-padding:1em;
   margin: 1em;
+   webkit-margin:1em;
 
   width: 100%;
+   webkit-width:100%;
 
   border: 1px solid white;
+     webkit-border:1pxsolidwhite;
   border-radius: 5px;
+   webkit-border-radius:5px;
 }
 
 #title {
   position: absolute;
+   webkit-position:absolute;
   left: 0;
+   webkit-left:0;
   top: 0;
+   webkit-top:0;
 
   font-weight: bold;
+   webkit-font-weight:bold;
   font-size: 1em;
+   webkit-font-size:1em;
 
   /* color: rgba(128, 128, 128, 1); */
+        webkit-/*color:rgba(128,128,128,1);*/
   color: black;
+   webkit-color:black;
   font-family: monospace;
+   webkit-font-family:monospace;
 }
 
 @property --color {
   syntax: '<color>';
+   webkit-syntax:'<color>';
   initial-value: black;
+   webkit-initial-value:black;
   inherits: false;
+   webkit-inherits:false;
 }
 
 .die {
   aspect-ratio: 1 / 1;
+     webkit-aspect-ratio:1/1;
   border-radius: 50%;
+   webkit-border-radius:50%;
 
   width: calc((100% - 8em * 4 - 3px * 8) / 4);
+             webkit-width:calc((100%-8em*4-3px*8)/4);
 
   margin: 4em;
+   webkit-margin:4em;
 
   display: inline-block;
+   webkit-display:inline-block;
   position: relative;
+   webkit-position:relative;
   
   background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, var(--color) 100%);
+                  webkit-background:radial-gradient(circleat50%50%,rgba(0,0,0,1)0%,rgba(0,0,0,1)50%,var(--color)100%);
   transition: --color 750ms cubic-bezier(0.34, 1.56, 0.64, 1), 
+         webkit-transition:--color750mscubic-bezier(0.34,1.56,0.64,1),
               transform 750ms cubic-bezier(0.34, 1.56, 0.64, 1), 
+                    webkit-transform750mscubic-bezier(0.34,1.56,0.64,1),
               border-radius 550ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                   webkit-border-radius550mscubic-bezier(0.34,1.56,0.64,1),
               border-color 650ms cubic-bezier(0.68, 2.34, 0.64, 1);
+                   webkit-border-color650mscubic-bezier(0.68,2.34,0.64,1);
 
   border: solid 3px;
+    webkit-border:solid3px;
 }
 
 .display {
   color: white;
+   webkit-color:white;
 
   position: relative;
+   webkit-position:relative;
   top: 50%;
+   webkit-top:50%;
   left: 50%;
+   webkit-left:50%;
 
   margin: 0;
+   webkit-margin:0;
 
   transform: translate(-50%, -50%) rotate(45deg);
+     webkit-transform:translate(-50%,-50%)rotate(45deg);
 }
 
 .normal {
   border-color: rgba(128, 128, 128, 1);
+      webkit-border-color:rgba(128,128,128,1);
 }
 
 .rolling {
   border-color: rgba(64, 64, 64, 1);
+      webkit-border-color:rgba(64,64,64,1);
 }
 
 .special {
   border-color: rgba(192, 192, 192, 1);
+      webkit-border-color:rgba(192,192,192,1);
 }
 
 .text {
   position: absolute;
+   webkit-position:absolute;
   top: 50%;
+   webkit-top:50%;
   left: 50%;
+   webkit-left:50%;
 
   margin: 0;
+   webkit-margin:0;
 
   font-size: 10em;
+   webkit-font-size:10em;
 
   transform: translate(-50%, -50%);
+    webkit-transform:translate(-50%,-50%);
 }
 
 .max {
   color: rgba(192, 192, 192, 1);
+      webkit-color:rgba(192,192,192,1);
 
   position: absolute;
+   webkit-position:absolute;
   top: calc(50% + 10em / 3);
+       webkit-top:calc(50%+10em/3);
   left: 50%;
+   webkit-left:50%;
 
   margin: 0;
+   webkit-margin:0;
 
   font-size: 2em;
+   webkit-font-size:2em;
 
   text-align: center;
+   webkit-text-align:center;
 
   transform: translate(-50%, 0%);
+    webkit-transform:translate(-50%,0%);
 
   /* transform: rotate(45deg) translate(-50%, -50%); */
+       webkit-/*transform:rotate(45deg)translate(-50%,-50%);*/
 }
